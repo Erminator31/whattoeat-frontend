@@ -1,0 +1,72 @@
+/* index.css */
+
+/* 1) Grundlegendes Reset und Box-Sizing */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* 2) Schriftart, Hintergrundfarbe */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa; /* dezentes Hellgrau, passt zu Bootstrap */
+  color: #212529;           /* Standard-Schriftfarbe Bootstrap */
+}
+
+/* 3) Links */
+a {
+  color: #0d6efd; /* Bootstrap-Primärfarbe */
+  text-decoration: none;
+}
+a:hover {
+  color: #0a58ca; /* etwas dunkler beim Hover */
+  text-decoration: underline;
+}
+
+/* 4) Überschriften */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+/* 5) Hilfsklasse für Innenabstand (optional) */
+.spacing {
+  padding: 2rem;
+}
+
+/* 6) Beispiel: eigene Container-Klasse (wenn du es abseits von <Container> nutzen willst) */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* 7) Optional: einfache Card-Klasse, falls du mal was ohne <Card> machen willst */
+.custom-card {
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 8) Navbar-Anpassungen (wenn du die Navbar statt per Bootstrap-Klassen etwas tweaken willst) */
+.navbar-light .navbar-brand,
+.navbar-light .nav-link {
+  color: #fff !important;
+}
