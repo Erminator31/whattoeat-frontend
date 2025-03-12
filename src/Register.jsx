@@ -25,7 +25,7 @@ function Register() {
             const response = await axios.post('http://localhost:8080/api/users/register', formData)
             // Falls dein Controller "User erfolgreich registriert" zurückgibt:
             setMessage({ text: response.data, variant: 'success' })
-            navigate('/Login')
+            navigate('/login', { state: { info: "Registrierung erfolgreich! Bitte überprüfe deine E-Mail, um dein Konto zu verifizieren." } })
         } catch (error) {
             // Backend schickt bei Fehler: "Fehler bei der Registrierung: <Grund>"
             setMessage({

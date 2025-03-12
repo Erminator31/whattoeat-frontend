@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavigationBar from "./NavigationBar";
 import Register from "./Register";
 import Login from "./Login";
+import ForgotPassword from "./ForgotPassword";
+import ResetPassword from "./ResetPassword";
 import Profile from "./Profile";
 import HomePage from "./Homepage";
 import PrivateRoute from "./PrivateRoute";
@@ -20,6 +22,8 @@ function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/forgot-password" element={<ForgotPassword />} />
+                    <Route path="/reset-password" element={<ResetPassword />} />
                     <Route
                         path="/profile"
                         element={
@@ -28,7 +32,6 @@ function App() {
                             </PrivateRoute>
                         }
                     />
-                    {/* Route für die Userliste (nur Admins zugänglich) */}
                     <Route
                         path="/userlist"
                         element={

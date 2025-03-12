@@ -39,9 +39,9 @@ function UserList() {
             });
     };
 
-    const handleEdit = (email) => {
-        // Navigation zur Bearbeitungsseite
-        navigate(`/edit-user/${email}`);
+    const handleEdit = (user) => {
+        // Navigiert zur Bearbeitungsseite und übergibt das gesamte User-Objekt
+        navigate(`/edit-user/${user.email}`, { state: { user } });
     };
 
     return (
@@ -66,7 +66,7 @@ function UserList() {
                         <td>{user.lastName}</td>
                         <td>{user.role}</td>
                         <td>
-                            <Button variant="warning" onClick={() => handleEdit(user.email)} className="me-2">
+                            <Button variant="warning" onClick={() => handleEdit(user)} className="me-2">
                                 Bearbeiten
                             </Button>
                             <Button variant="danger" onClick={() => handleDelete(user.email)}>
@@ -76,6 +76,7 @@ function UserList() {
                     </tr>
                 ))}
                 </tbody>
+
             </Table>
         </div>
     );
